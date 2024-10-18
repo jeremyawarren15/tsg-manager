@@ -10,8 +10,7 @@ import postgres from "postgres"
 import { drizzle } from "drizzle-orm/postgres-js"
 import type { AdapterAccountType } from "@auth/core/adapters"
 
-const connectionString = "postgres://postgres:postgres@localhost:5432/drizzle"
-const pool = postgres(connectionString, { max: 1 })
+const pool = postgres(process.env.DATABASE_URL, { max: 1 })
 
 export const db = drizzle(pool)
 

@@ -10,14 +10,20 @@
     "createMigration": "npx drizzle-kit generate",
     "migrate": "npx drizzle-kit migrate",
     "seed": "npx tsx src/index.ts",
-    "studio": "npx drizzle-kit studio"
+    "studio": "npx drizzle-kit studio --port 3001"
   },
   "dependencies": {
-    "@auth/core": "^0.37.0",
+    "@auth/core": "^0.34.2",
+    "@auth/drizzle-adapter": "^1.7.0",
+    "@emotion/react": "^11.13.3",
+    "@emotion/styled": "^11.13.0",
+    "@fontsource/roboto": "^5.1.0",
+    "@mui/icons-material": "^6.1.4",
+    "@mui/material": "^6.1.4",
     "dotenv": "^16.4.5",
     "drizzle-orm": "^0.35.1",
     "next": "14.2.15",
-    "next-auth": "^4.24.8",
+    "next-auth": "^5.0.0-beta.22",
     "pg": "^8.13.0",
     "postgres": "^3.4.4",
     "react": "^18",
