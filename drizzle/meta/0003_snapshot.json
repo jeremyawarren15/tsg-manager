@@ -1,6 +1,6 @@
 {
-  "id": "927d4ad3-3df4-4037-b411-bb72882c25ba",
-  "prevId": "a61d07dc-1a12-438e-9b40-d07ca659a2ae",
+  "id": "0f0b7660-37a9-469b-8c4b-20142417679b",
+  "prevId": "02284fd8-b611-4601-8667-8067b6b124a6",
   "version": "7",
   "dialect": "postgresql",
   "tables": {
@@ -32,26 +32,26 @@
           "primaryKey": false,
           "notNull": true
         },
-        "refreshToken": {
-          "name": "refreshToken",
+        "refresh_token": {
+          "name": "refresh_token",
           "type": "text",
           "primaryKey": false,
           "notNull": false
         },
-        "accessToken": {
-          "name": "accessToken",
+        "access_token": {
+          "name": "access_token",
           "type": "text",
           "primaryKey": false,
           "notNull": false
         },
-        "expiresAt": {
-          "name": "expiresAt",
+        "expires_at": {
+          "name": "expires_at",
           "type": "integer",
           "primaryKey": false,
           "notNull": false
         },
-        "tokenType": {
-          "name": "tokenType",
+        "token_type": {
+          "name": "token_type",
           "type": "text",
           "primaryKey": false,
           "notNull": false
@@ -62,8 +62,8 @@
           "primaryKey": false,
           "notNull": false
         },
-        "idToken": {
-          "name": "idToken",
+        "id_token": {
+          "name": "id_token",
           "type": "text",
           "primaryKey": false,
           "notNull": false
@@ -76,21 +76,7 @@
         }
       },
       "indexes": {},
-      "foreignKeys": {
-        "accounts_userId_users_id_fk": {
-          "name": "accounts_userId_users_id_fk",
-          "tableFrom": "accounts",
-          "tableTo": "users",
-          "columnsFrom": [
-            "userId"
-          ],
-          "columnsTo": [
-            "id"
-          ],
-          "onDelete": "cascade",
-          "onUpdate": "no action"
-        }
-      },
+      "foreignKeys": {},
       "compositePrimaryKeys": {
         "accounts_provider_providerAccountId_pk": {
           "name": "accounts_provider_providerAccountId_pk",
@@ -182,8 +168,8 @@
         }
       },
       "uniqueConstraints": {
-        "authenticators_credentialId_unique": {
-          "name": "authenticators_credentialId_unique",
+        "authenticators_credentialID_unique": {
+          "name": "authenticators_credentialID_unique",
           "nullsNotDistinct": false,
           "columns": [
             "credential_id"
@@ -257,8 +243,8 @@
           "primaryKey": false,
           "notNull": false
         },
-        "email_verified": {
-          "name": "email_verified",
+        "emailVerified": {
+          "name": "emailVerified",
           "type": "timestamp",
           "primaryKey": false,
           "notNull": false

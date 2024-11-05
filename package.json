@@ -7,10 +7,10 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "createMigration": "npx drizzle-kit generate",
-    "migrate": "npx drizzle-kit migrate",
-    "seed": "npx tsx src/index.ts",
-    "studio": "npx drizzle-kit studio --port 3001"
+    "createMigration": "drizzle-kit generate",
+    "migrate": "drizzle-kit migrate",
+    "seed": "tsx src/db/seed.ts",
+    "studio": "drizzle-kit studio --port 3001"
   },
   "dependencies": {
     "@auth/core": "^0.34.2",
@@ -37,7 +37,7 @@
     "drizzle-kit": "^0.26.2",
     "eslint": "^8",
     "eslint-config-next": "14.2.15",
-    "tsx": "^4.19.1",
+    "tsx": "^4.19.2",
     "typescript": "^5"
   }
 }

@@ -2,7 +2,7 @@ import { boolean, primaryKey, pgTable, text, integer } from "drizzle-orm/pg-core
 import { users } from "./users"
 
 export const authenticators = pgTable(
-  "authenticator",
+  "authenticators",
   {
     credentialID: text("credentialID").notNull().unique(),
     userId: text("userId")
@@ -10,10 +10,10 @@ export const authenticators = pgTable(
       .references(() => users.id, { onDelete: "cascade" }),
     providerAccountId: text("providerAccountId").notNull(),
     credentialPublicKey: text("credentialPublicKey").notNull(),
-    counter: integer("counter").notNull(),
+    counter: integer().notNull(),
     credentialDeviceType: text("credentialDeviceType").notNull(),
     credentialBackedUp: boolean("credentialBackedUp").notNull(),
-    transports: text("transports"),
+    transports: text(),
   },
   (authenticator) => ({
     compositePK: primaryKey({
